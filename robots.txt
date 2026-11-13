@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vijaykothare.github.io/claude6/sitemap.xml
