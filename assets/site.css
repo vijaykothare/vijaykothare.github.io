@@ -487,3 +487,7 @@ header.top.scrolled.on-dark{background:color-mix(in srgb,var(--night) 80%,transp
 .navl a{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
 .on-dark .navl a{background:transparent}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header.top.scrolled{background:var(--paper)}header.top.scrolled.on-dark{background:var(--night)}}
+
+.cs-meta{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.site-link{color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1.5px}
+.site-link:hover{color:var(--ink)}
