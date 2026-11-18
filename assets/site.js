@@ -29,6 +29,7 @@ function onScroll(){
   if (badge) badge.style.transform = `rotate(${y * .15}deg)`;
   let dark = false; $$(".dark, footer").forEach(s => { if (s.offsetParent === null && s.tagName !== "FOOTER") return; const r = s.getBoundingClientRect(); if (r.top < 40 && r.bottom > 40) dark = true; });
   hdr?.classList.toggle("on-dark", dark);
+  hdr?.classList.toggle("scrolled", y > 8 || !!document.querySelector(".view:not([hidden]) .cs-hero, .view:not([hidden]) .pg-head, .view:not([hidden]) .ab-intro") && y > 0);
   const man = $(".manifesto", active);
   if (man && man.offsetParent !== null) {
     const words = $$(".w", man), m = man.getBoundingClientRect();

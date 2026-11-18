@@ -478,3 +478,12 @@ a.tl-row:hover b{color:var(--accent-ink)}
 .device.desk{max-width:min(100%,calc((100svh - 220px) * 1.6));margin:0 auto}
 
 .ab-photo .chip{background:var(--ink);color:var(--paper)}
+
+/* single frosted header bar on scroll */
+header.top{pointer-events:auto;transition:background-color .3s ease,box-shadow .3s ease,border-color .3s ease;border-bottom:1px solid transparent}
+header.top .wrap{height:72px}
+header.top.scrolled{background:color-mix(in srgb,var(--paper) 78%,transparent);-webkit-backdrop-filter:saturate(1.6) blur(18px);backdrop-filter:saturate(1.6) blur(18px);border-bottom-color:color-mix(in srgb,var(--ink) 10%,transparent);box-shadow:0 8px 28px rgba(14,20,48,.07)}
+header.top.scrolled.on-dark{background:color-mix(in srgb,var(--night) 80%,transparent);border-bottom-color:rgba(255,255,255,.08);box-shadow:0 8px 28px rgba(0,0,0,.25)}
+.navl a{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+.on-dark .navl a{background:transparent}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header.top.scrolled{background:var(--paper)}header.top.scrolled.on-dark{background:var(--night)}}
